@@ -83,7 +83,7 @@ Copy the sample `config.inc.php.dist` file into `config.inc.php` and adjust the
 settings according to your desired setup. All options are described with inline 
 comments directly in the sample file.
 
-!! Please be aware that 'sha1' is hardcoded at some places. Do not change hashing algorithm without review
+:warning: Please be aware that 'sha1' is hardcoded at some places. Do not change hashing algorithm without review
 
 When using the LDAP storage together with a Kolab installation, you may want to save 
 an additional LDAP lookup for authentication factors on every login, the LDAP driver 
