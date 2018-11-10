@@ -28,24 +28,11 @@ namespace Kolab2FA\OTP;
 
 trait OTP
 {
-    protected $secret = null;
     protected $issuer = null;
     protected $issuer_included_as_parameter = false;
     protected $label = null;
-    protected $digest = 'sha1';
+    protected $digest = 'sha1'; // TODO: Bad idea! Must come from config
     protected $digits = 6;
-
-    public function setSecret($secret)
-    {
-        $this->secret = $secret;
-
-        return $this;
-    }
-
-    public function getSecret()
-    {
-        return $this->secret;
-    }
 
     public function setLabel($label)
     {

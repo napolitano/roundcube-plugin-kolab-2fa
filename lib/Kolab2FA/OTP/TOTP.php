@@ -30,7 +30,8 @@ use OTPHP\TOTP as Base;
 
 class TOTP extends Base
 {
-    use Base;
+    use OTP;
+    
     protected $interval = 30;
 
     public function setInterval($interval)
