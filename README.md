@@ -6,6 +6,24 @@ authentication mechanisms paired with different ways to store the related
 data for Roundcube user accounts. Both drivers and storage backends are derived 
 from abstract classes which define the common interface and are configurable.
 
+Fork of original Kolab 2FA module
+---------------------------------
+
+This is a fork of the original plugin which had some issues like deprecated
+and pretty outdated dependencies and flaws which prevented it from correct
+behavior.
+
+Please be aware that I work on this plugin for my own use. I'm focused on
+TOTP for the moment so that I do not care yet about U2F and HOTP. It
+might be possible that these alternatives still have some issues.
+
+You are always welcome to report issues but please do not expect that they will
+be fixed quickly.
+
+If you need official support or if you want to review the original source code,
+you should visit https://git.kolab.org
+ 
+
 Drivers
 -------
 
@@ -48,12 +66,14 @@ After placing the plugin contents into Roundcube's plugins directory, the 3rd pa
 libraries need to be installed using Composer:
 
 ```
-$ composer require "endroid/qrcode" "~1.5.0" --no-update
-$ composer require "spomky-labs/otphp" "~5.0.0" --no-update
-$ composer require "enygma/yubikey" "~3.2"
+$ composer require "endroid/qr-code" "~3.4.4" --no-update
+$ composer require "spomky-labs/otphp" "~9.1.1" --no-update
+$ composer require "enygma/yubikey" "~3.3"
 ```
 
 See the `composer.json` file for the actual module names and versions.
+
+Tested with PHP >= 7.1.2
 
 
 Configuration
@@ -62,6 +82,8 @@ Configuration
 Copy the sample `config.inc.php.dist` file into `config.inc.php` and adjust the 
 settings according to your desired setup. All options are described with inline 
 comments directly in the sample file.
+
+!! Please be aware that 'sha1' is hardcoded at some places. Do not change hashing algorithm without review
 
 When using the LDAP storage together with a Kolab installation, you may want to save 
 an additional LDAP lookup for authentication factors on every login, the LDAP driver 
