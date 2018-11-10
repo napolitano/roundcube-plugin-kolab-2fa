@@ -21,6 +21,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+use Endroid\QrCode\ErrorCorrectionLevel;
+use Endroid\QrCode\QrCode;
+
 class kolab_2fa extends rcube_plugin
 {
     public $task = '(login|settings)';
@@ -680,14 +683,15 @@ class kolab_2fa extends rcube_plugin
                 try {
                     $uri = $driver->get_provisioning_uri();
 
-                    $qr = new Endroid\QrCode\QrCode();
-                    $qr->setText($uri)
-                       ->setSize(240)
-                       ->setPadding(10)
-                       ->setErrorCorrection('high')
-                       ->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0))
-                       ->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0));
-                    $data['qrcode'] = base64_encode($qr->get());
+                    // Modified to match interface of Endroid/Qr-Code 3.4.4
+                    $qr = new QrCode();
+                    $qr->setText($uri);
+                    $qr->setSize(240);
+                    $qr->setMargin(10); // Padding does not longer exist. Margin must be used.
+                    $qr->setErrorCorrectionLevel(ErrorCorrectionLevel::HIGH); // Setter changed
+                    $qr->setForegroundColor(array('r' => 0, 'g' => 0, 'b' => 0, 'a' => 0));
+                    $qr->setBackgroundColor(array('r' => 255, 'g' => 255, 'b' => 255, 'a' => 0));
+                    $data['qrcode'] = base64_encode($qr->writeString()); // "get" was replaced with writeSting()
                 }
                 catch (Exception $e) {
                     rcube::raise_error($e, true, false);
