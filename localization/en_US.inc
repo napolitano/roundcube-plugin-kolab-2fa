@@ -55,3 +55,5 @@ $labels['codeverificationfailed'] = 'Code verification for $method failed';
 $labels['highsecurityrequired'] = 'Entering High Security - Verification required';
 $labels['highsecuritydialog'] = 'High security mode helps protect your account from security threats, like session theft or someone messing with your stuff while you\'re away. To enter high security mode, confirm your credentials with the additional authentication factor:';
 $labels['enterhighsecurity'] = 'Confirm';
+
+$labels['uniquenames'] = 'You should use <strong>individual</strong> and <strong>unique</strong> names for your authentication factors to avoid misunderstandings when asked for a code.';

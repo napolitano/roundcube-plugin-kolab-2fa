@@ -28,9 +28,9 @@ $labels['no'] = 'Nein';
 $labels['label'] = 'Name';
 $labels['qrcode'] = 'QR-Code';
 $labels['showqrcode'] = 'QR-Code anzeigen';
-$labels['qrcodeexplaintotp'] = 'Laden Sie eine Authentifizierungs-App auf Ihr Handy herunter. Zwei gut funktionierende Apps sind <strong> FreeOTP </strong> und <strong> Google Authenticator </strong>, aber jede andere TOTP-App sollte ebenfalls funktionieren. <br/> <br/>
+$labels['qrcodeexplaintotp'] = 'Laden Sie eine Authentifizierungs-App auf Ihr Handy herunter. Zwei gut funktionierende Apps sind <strong>FreeOTP</strong> und <strong>Google Authenticator</strong>, aber jede andere TOTP-App sollte ebenfalls funktionieren.<br/><br/>
 Starten Sie die App auf Ihrem Smartphone und fügen Sie einen neuen Eintrag für diesen Dienst hinzu. Scannen Sie den QR-Code, wenn Sie dazu aufgefordert werden, um Ihre mobile App zu konfigurieren.';
-$labels['qrcodeexplainhotp'] = 'Laden Sie eine Authentifizierungs-App auf Ihr Handy herunter. Eine bekanntermaßen gut funktionierende App ist <strong> Google Authenticator </strong>, jede andere HOTP-App sollte jedoch ebenfalls funktionieren. <br/> <br/>
+$labels['qrcodeexplainhotp'] = 'Laden Sie eine Authentifizierungs-App auf Ihr Handy herunter. Eine bekanntermaßen gut funktionierende App ist <strong>Google Authenticator</strong>, jede andere HOTP-App sollte jedoch ebenfalls funktionieren.<br/><br/>
 Starten Sie die App auf Ihrem Smartphone und fügen Sie einen neuen Eintrag für diesen Dienst hinzu. Scannen Sie den QR-Code, wenn Sie dazu aufgefordert werden, um Ihre mobile App zu konfigurieren.';
 
 $labels['yubikeyid'] = 'Ihre Yubikey-ID';
@@ -55,3 +55,5 @@ $labels['codeverificationfailed'] = 'Die Überprüfung des Codes für $method is
 $labels['highsecurityrequired'] = 'Sicherheitsbereich - Überprüfung erforderlich';
 $labels['highsecuritydialog'] = 'Der Modus für hohe Sicherheit schützt Ihr Konto vor Sicherheitsbedrohungen, z. B. Sitzungsdiebstahl oder jemandem, der sich während Ihrer Abwesenheit mit Ihren Daten beschäftigt. Um den Sicherheitsmodus zu aktivieren, bestätigen Sie Ihre Anmeldeinformationen mit dem zusätzlichen Authentifizierungsfaktor:';
 $labels['enterhighsecurity'] = 'Bestätigen';
+
+$labels['uniquenames'] = 'Sie sollten Ihren Authentifizierungsfaktoren <strong>individuelle</strong> und <strong>eindeutige</strong> Namen geben, damit es bei der Abfrage eines Codes nicht zu Missverständnissen kommt.';
