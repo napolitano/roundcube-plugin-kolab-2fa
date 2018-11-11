@@ -10,7 +10,7 @@
 
 $labels['factor'] = 'Faktor';
 $labels['secret'] = 'Geheimer Schlüssel';
-$labels['created'] = 'Erstellt';
+$labels['created'] = 'Erstellungsdatum';
 $labels['remove'] = 'Löschen';
 $labels['continue'] = 'Fortfahren';
 
