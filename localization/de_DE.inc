@@ -14,7 +14,7 @@ $labels['created'] = 'Erstellt';
 $labels['remove'] = 'Löschen';
 $labels['continue'] = 'Fortfahren';
 
-$labels['settingslist'] = 'Multi-Faktor Authentifizierung';
+$labels['settingslist'] = 'Multifaktor Auth';
 $labels['settingstitle'] = 'Authentifizierungsfaktoren';
 
 $labels['totp'] = 'Mobil App (TOTP)';
